@@ -1,1 +1,80 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st month💌Bandido🦊 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <!-- Load confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+</head>
+<body>
+    <!-- Music Control -->
+    <div class="music-control" id="musicControl">
+        <span id="musicIcon">🔊</span>
+    </div>
+
+    <!-- Particles Container -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Balloons -->
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <!-- Intro Scene -->
+    <div class="container">
+        <div class="intro-scene" id="introScene">
+            <h1 class="glow-text">🎉 Feliz primer mesiversario juntos</h1>
+            <p class="subtitle">Hoy estamos cumpliendo nuestro primer mes desde aquel 8 de octubre en el q me pediste ser novios 
+I've come such a long way, and I'm proud of every step, every lesson, and every little victory along the way.</p>
+            <p class="subtitle">✨ Get ready, because this day is all about me our tory, our joy </p>
+            <button class="party-btn" id="startParty">Start our Celebration❤⚔️</button>
+        </div>
+    </div>
+
+    <!-- Celebration Scene -->
+    <div class="celebration-scene" id="celebrationScene">
+        <div class="countdown" id="countdown">Getting everything ready for you bandido❤...</div>
+        <p class="celebration-text">Just a moment while I prepare something special for this special day ✨</p>
+        
+        <!-- Birthday Dancers Container -->
+        <div class="birthday-dancers" id="birthdayDancers">
+            <img src="https://www.dropbox.com/scl/fi/v2af98wrdvmxuncrjfbuv/birthday-dancers.png?rlkey=hzxd1vetxu6xghxsdlcsrd3m0&st=p0nhpiqk&dl=1" 
+                 alt="Dancing for Alexandro's joy" 
+                 class="dancer-image"
+                 id="dancerImage">
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <!-- Transition-scene-->
+    <div class="transition-scene" id="transitionScene">
+        <h1 class="glow-text">Ready for My Journey! 🎁</h1>
+        <p class="subtitle">Our personal  journey is waiting for you</p>
+        <button class="reflection-btn" id="openReflection">Enter our personal Journey ✨</button>
+        <div class="iframe-container" id="iframeContainer">
+            <iframe src="https://my-birthday-and-journey.vercel.app/" frameborder="0" class="project-frame" id="projectFrame"></iframe>
+            <button class="close-frame" id="closeFrame">← Back to Celebration</button>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://www.dropbox.com/scl/fi/awxx9kncazis1fry39auy/Feeling-good.m4a?rlkey=j0wt42o8dgicgn2hzyfpi5c33&st=x5q1roox&dl=1" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js" defer></script>
+</body>
+      </html>
