@@ -88,7 +88,7 @@ function createParticles() {
 
 // Start the party
 function startParty() {
-    console.log("Starting Fatima's birthday celebration!");
+    console.log("Comienza nuestro día juntos!! Feliz 1er mes guapo");
     
     if (!elements.introScene || !elements.celebrationScene) return;
     
