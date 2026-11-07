@@ -1,13 +1,17 @@
 
-
-// DOM Elements
 let elements = {};
 
-// Music state
+// eSTado de la musica
 let musicPlaying = false;
 const COUNTDOWN_DURATION = 18;
 
-// Initialize the application when DOM is loaded
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     initializeElements();
     createParticles();
@@ -17,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeElements() {
     console.log("Initializing elements...");
     
-    // Cache DOM elements
+
     elements = {
         introScene: document.getElementById('introScene'),
         celebrationScene: document.getElementById('celebrationScene'),
@@ -63,11 +67,10 @@ function setupEventListeners() {
     }
 }
 
-// Create particles (reduced for increased performance from last version)
 function createParticles() {
     if (!elements.particlesContainer) return;
     
-    // Reduced particle count for better performance
+  
     for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
@@ -86,29 +89,29 @@ function createParticles() {
     }
 }
 
-// Start the party
+
 function startParty() {
     console.log("Comienza nuestro día juntos!! Feliz 1er mes guapo");
     
     if (!elements.introScene || !elements.celebrationScene) return;
     
-    // Hide intro scene
+    
     elements.introScene.style.display = 'none';
     
-    // Show celebration scene
+    
     elements.celebrationScene.style.display = 'flex';
     
-    // Start animations
+   
     startBirthdayDancers();
     
-    // Show balloons
+    
     setTimeout(() => {
         elements.balloons.forEach(balloon => {
             balloon.style.opacity = '0.8';
         });
     }, 300);
     
-    // Start music
+    
     if (elements.bgMusic && !musicPlaying) {
         elements.bgMusic.volume = 0.6;
         elements.bgMusic.play().catch(e => {
@@ -128,11 +131,11 @@ function startParty() {
         });
     }
     
-    // Start countdown
+   
     startCountdown();
 }
 
-// Start birthday dancers animation 
+
 function startBirthdayDancers() {
     if (!elements.birthdayDancers || !elements.dancerImage) return;
     
@@ -141,7 +144,7 @@ function startBirthdayDancers() {
     }, 500);
 }
 
-// Start countdown
+
 function startCountdown() {
     let count = COUNTDOWN_DURATION;
     
@@ -150,12 +153,12 @@ function startCountdown() {
             elements.countdownElement.textContent = count;
         }
         
-        // Update progress bar
+        
         if (elements.progressBar) {
             elements.progressBar.style.width = `${((COUNTDOWN_DURATION - count) / COUNTDOWN_DURATION) * 100}%`;
         }
         
-        // Occasional confetti
+        
         if (count === 12 || count === 6 || count === 3) {
             if (typeof confetti === 'function') {
                 confetti({
@@ -181,7 +184,7 @@ function startCountdown() {
                 });
             }
             
-            // Show transition scene
+            
             setTimeout(() => {
                 if (elements.celebrationScene && elements.transitionScene) {
                     elements.celebrationScene.style.display = 'none';
@@ -194,7 +197,7 @@ function startCountdown() {
     }, 1000);
 }
 
-// Open reflection project in fullscreen
+
 function openReflection() {
     if (!elements.iframeContainer) return;
     
@@ -210,14 +213,14 @@ function openReflection() {
     }
 }
 
-// Close reflection and return to celebration
+
 function closeReflection() {
     if (!elements.iframeContainer) return;
     
     elements.iframeContainer.classList.remove('active');
 }
 
-// Toggle music
+
 function toggleMusic() {
     if (!elements.bgMusic) return;
     
