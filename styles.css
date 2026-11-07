@@ -317,7 +317,7 @@ body {
     }
 }
 
-/* Balloons */
+
 .balloon {
     position: absolute;
     width: 30px;
@@ -381,7 +381,7 @@ body {
     }
 }
 
-/* Mobile  */
+
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -442,7 +442,6 @@ body {
     }
 }
 
-/* Performance optimization uldated from last version with lagging */
 @media (prefers-reduced-motion: reduce) {
     .particle, .balloon, .dancer-image {
         animation: none;
